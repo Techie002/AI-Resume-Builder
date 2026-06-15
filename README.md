@@ -64,7 +64,7 @@ You enter your name, skills, achievements. AI writes your resume. Download in HT
 ## Future Scope 
 
 - **Save progress** - Browser storage so data doesn't disappear on refresh
-- **Dark mode** - Because 2024
+- **Dark mode** - for more enhanced experience
 - **Better PDF** - Fix the text cutting issue
 - **Mobile friendly** - Make it work on phones properly
 - **LinkedIn import** - Auto-fill your profile with one click
