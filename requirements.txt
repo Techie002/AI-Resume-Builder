@@ -1,0 +1,19 @@
+# Core dependencies
+streamlit>=1.28.0
+python-dotenv>=1.0.0
+
+# AI/ML APIs
+xai-sdk>=0.1.0
+huggingface-hub>=0.19.0
+requests>=2.31.0
+
+# PDF Generation
+reportlab>=4.0.0
+weasyprint>=60.0
+
+# Word Document Export
+python-docx>=0.8.11
+
+# Additional utilities
+pillow>=10.0.0
+python-magic>=0.4.27

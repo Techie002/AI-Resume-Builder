@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} - Modern Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+        }
+        
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+        
+        .resume:hover {
+            transform: scale(1.01);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+        
+        .hero-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .summary-text {
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .achievement-item {
+            margin: 12px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+        
+        .achievement-item:before {
+            content: "⭐";
+            position: absolute;
+            left: -5px;
+            color: #764ba2;
+        }
+        
+        .skill-modern {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            margin: 5px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 700px) {
+            .grid-2 { grid-template-columns: 1fr; gap: 20px; }
+            .hero h1 { font-size: 32px; }
+            .hero-contact { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="hero">
+            <h1>{{name}}</h1>
+            <p>{{title}}</p>
+            <div class="hero-contact">
+                <span>📧 {{email}}</span>
+                <span>📞 {{phone}}</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>✨ Professional Summary</h3>
+                    <div class="summary-text">{{summary}}</div>
+                </div>
+                
+                <div class="card">
+                    <h3>💪 Key Achievements</h3>
+                    {{achievements}}
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>🛠️ Technical Skills</h3>
+                <div>
+                    {{skills_html}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
